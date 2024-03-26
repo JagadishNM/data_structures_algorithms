@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			h1 {
+				color: red;
+			}
+		</style>
+		<title>Web Component</title>
+		<script
+			defer
+			src="./web_component.js"></script>
+	</head>
+	<body>
+		<h1>I am Light Dom</h1>
+		<person-details list="Learn"
+			>Todo 1
+			<span slot="description"
+				>slot content with name</span
+			></person-details
+		>
+		<person-details>Todo 2</person-details>
+		<person-details>Todo 3</person-details>
+	</body>
+</html>

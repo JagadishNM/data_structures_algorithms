@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Web Worker </title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			.buttons {
+				display: flex;
+			}
+			button {
+				margin: 15px;
+			}
+		</style>
+		<script
+			defer
+			src="./script.js"></script>
+	</head>
+	<body>
+		<div class="buttons">
+			<button id="computationButton">Computation in worker thread</button>
+			<button id="changeColor">Change baground color</button>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+- command to run ts file _ts-node_
