@@ -15,5 +15,5 @@ function printName(arg1, arg2){
     console.log(this.firstName+' '+ this.lastName+' '+arg1+ ' ' +arg2)
 }
 
-const result2 = printName.myBind(myName, "Palia",);
+const result2 = printName.myBind(myName, "Palia",'');
 result2("India");

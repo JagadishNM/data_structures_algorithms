@@ -14,7 +14,7 @@ function sameFrequency(num1, num2) {
   const obj = {};
 
   for (const char of str1) {
-    obj[char] = ++obj[char] || 1;
+    obj[char] = (obj[char] || 0) + 1;
   }
 
   for (const char of str2) {

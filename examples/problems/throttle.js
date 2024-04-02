@@ -1,3 +1,5 @@
+//Throttling limits the execution of your code to once in every specified time interval.
+
 function throttle(mainFunction, delay = 300) {
 	let timerFlag = null;
 
