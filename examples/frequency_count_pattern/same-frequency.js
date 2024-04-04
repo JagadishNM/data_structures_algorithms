@@ -6,8 +6,8 @@
 
 
 function sameFrequency(num1, num2) {
-  const str1 = `${num1}`;
-  const str2 = `${num2}`;
+  const str1 = num1.toString();
+  const str2 = num2.toString();
 
   if (str1.length !== str2.length) return false;
 

@@ -8,3 +8,6 @@
   of list
 - What is the minimal number of Stacks need to implement a Queue?
   `A Queue can be implemented using two Stacks.`
+- [Questions linked list and stack](image.png)
+- [stack](https://www.hackerrank.com/challenges/one-month-preparation-kit-equal-stacks/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=one-month-preparation-kit&playlist_slugs%5B%5D=one-month-week-four)
+- (Medium questons and answers)[https://medium.com/@aifuture/top-20-javascript-interview-questions-for-mastering-data-structures-3af40cca67b6]

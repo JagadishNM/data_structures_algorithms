@@ -34,6 +34,6 @@ function kthSmallest(nums, k){
     return low;
 }
 
-var k = 3;
-var nums = [1, 4, 5, 3, 19, 3];
+var k = 2;
+var nums = [1, 4, 5, 2, 19, 3];
 console.log(kthSmallest(nums, k))
