@@ -6,6 +6,7 @@ class Node1 {
 		this.next = null;
 	}
 }
+
 class SinglyLinkedList {
 	head: any;
 	tail: any;
