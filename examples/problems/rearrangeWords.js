@@ -6,7 +6,7 @@ function rearrangeWords(text) {
     }
 
     // Split the input text into an array of words
-    let words = text.split(" ");
+    let words = text.toLowerCase().split(" ");
 
     // Sort the array of words based on their lengths
     words.sort((a, b) => {

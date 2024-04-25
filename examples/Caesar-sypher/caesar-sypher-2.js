@@ -3,10 +3,10 @@ function caesarCipher(s, k) {
   for (let i = 0; i < s.length; i++) {
       let char = s[i];
       if (char.match(/[a-zA-Z]/)) { // Check if the character is a letter
-          let charCode = s.charCodeAt(i);
-          let offset = charCode >= 65 && charCode <= 90 ? 65 : 97; // Determine offset for uppercase or lowercase letters
-          let encryptedCharCode = ((charCode - offset + k) % 26 + 26) % 26 + offset; // Apply Caesar Cipher rotation
-          encryptedText += String.fromCharCode(encryptedCharCode);
+          let asciNum = s.charCodeAt(i);
+          let offset = asciNum >= 65 && asciNum <= 90 ? 65 : 97; // Determine offset for uppercase or lowercase letters
+          let encryptedAsciNum = ((asciNum - offset + k) % 26 + 26) % 26 + offset; // Apply Caesar Cipher rotation
+          encryptedText += String.fromCharCode(encryptedAsciNum);
       } else {
           encryptedText += char; // Non-alphabetic characters remain unchanged
       }
