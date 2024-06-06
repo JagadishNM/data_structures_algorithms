@@ -22,5 +22,7 @@ function saveInput() {
 }
 const processChange = debounce(saveInput, 2000);
 processChange();
+processChange();
+processChange();
 
 //<button onclick='processChange()'>Click me</button>;

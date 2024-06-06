@@ -1,8 +1,7 @@
-Function.prototype.myBind = function(...args){
-    const callback = this;
-    const params = args.splice(1);
-    return function(...args2){        
-        callback.apply(args[0], [...params, ...args2]);
+Function.prototype.myBind = function(obj, ...args){
+    const func = this;
+    return function(...newArgs){        
+        func.apply(obj, [...args, ...newArgs]);
     }
 }
 
@@ -11,9 +10,9 @@ const myName = {
     lastName: 'M'
 }
 
-function printName(arg1, arg2){
-    console.log(this.firstName+' '+ this.lastName+' '+arg1+ ' ' +arg2)
+function printName(id, city){
+    console.log(this.firstName+' '+ this.lastName+' '+id+ ' ' +city)
 }
 
-const result2 = printName.myBind(myName, "Palia",'');
-result2("India");
+const result2 = printName.myBind(myName, "a_random_id");
+result2("New York");
