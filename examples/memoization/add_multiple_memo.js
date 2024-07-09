@@ -15,12 +15,6 @@ function memoization(f) {
 }
 
 
-const constructPropertyName = (functionToMemo, args) => {
-	let propToCheck = [];
-	propToCheck = propToCheck.concat(functionToMemo.name, args);
-	return propToCheck.join('|');
-};
-
 const summation = (a, b) => {
 	return a + b;
 };

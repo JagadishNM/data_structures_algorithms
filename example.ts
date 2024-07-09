@@ -1,4 +1,4 @@
-// https://www.linkedin.com/posts/pukhraj-it_yesterday-i-attended-salesforce-oa-on-hackerrank-activity-7106158787358539776-KYr_/
+// https://leetcode.com/discuss/interview-question/570407/salesforce-oa-hackerrank
 console.log(receiveInputs([25, 50], [5, 4], 35));
 console.log(receiveInputs([100, 500], [18, 15.50], 2000));
 

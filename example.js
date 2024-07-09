@@ -1,5 +1,5 @@
-// https://leetcode.com/discuss/interview-question/570407/salesforce-oa-hackerrank
 
+// https://www.linkedin.com/posts/pukhraj-it_yesterday-i-attended-salesforce-oa-on-hackerrank-activity-7106158787358539776-KYr_/
 function findMVP(n, A) {
     // Initialize an empty array to store the MVPs
     let res = [];
