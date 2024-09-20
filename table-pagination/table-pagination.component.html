@@ -1,0 +1,45 @@
+<div class="p-4">
+	<table class="table">
+		<thead>
+			<th>id</th>
+			<th>title</th>
+			<th>category</th>
+			<th>price</th>
+		</thead>
+
+		<tbody>
+			@for(data of gridData; track data.id) {
+			<tr>
+				<td>{{ data.id }}</td>
+				<td>{{ data.title }}</td>
+				<td>{{ data.category }}</td>
+				<td>{{ data.price }}</td>
+			</tr>
+			}
+		</tbody>
+	</table>
+
+	<div class="d-flex justify-content-center">
+		<button
+			(click)="pageChange(1, true)"
+			[disabled]="pageNumber === 1">
+			First
+		</button>
+		<button
+			(click)="pageChange(-1)"
+			[disabled]="pageNumber === 1">
+			Previous
+		</button>
+
+		<button
+			(click)="pageChange(1)"
+			[disabled]="pageNumber === totalPages">
+			Next
+		</button>
+		<button
+			(click)="pageChange(totalPages, true)"
+			[disabled]="pageNumber === totalPages">
+			Last
+		</button>
+	</div>
+</div>
