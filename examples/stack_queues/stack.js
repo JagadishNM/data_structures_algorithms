@@ -5,7 +5,7 @@ class Node3 {
 		this.next = null;
 	}
 }
-
+// Stack is last in first out
 class Stack {
 	constructor() {
 		this.first = null;

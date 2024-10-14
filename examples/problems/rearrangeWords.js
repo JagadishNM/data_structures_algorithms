@@ -33,7 +33,7 @@ function rearrangeWords(text) {
 
 // Example usage:
 let text1 = "Leetcode is cool.";
-console.log(rearrangeWords(text1)); // Output: "Is cool Leetcode."
+console.log(rearrangeWords(text1)); // Output: "Is cool leetcode."
 
 let text2 = "Keep calm and code on.";
 console.log(rearrangeWords(text2)); // Output: "On and keep calm code."

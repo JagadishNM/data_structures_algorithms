@@ -4,12 +4,15 @@
 if (!Array.prototype.map) {
   
     // Step 2: Define the map function as a polyfill
-    let temp=[];
+    Array.prototype.myMap = function(callback){
+        let temp=[];
     for(let i=0;i<this.length;i++)
     {
         temp.push(callback(this[i],i,this));
     }
     return temp;
+    }
+    
   }
   
   // Example Usage:
@@ -21,7 +24,7 @@ console.log(multiply);
 
 // Filter
 
-Array.prototype.myFilter=function(callback){
+Array.prototype.myFilter = function(callback){
     let temp=[];
     for(let i=0;i<this.length;i++)
     {

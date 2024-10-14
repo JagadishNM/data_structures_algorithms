@@ -7,6 +7,8 @@ new Promise(res => {
 }).then(() => console.log(4));
 console.log(5);
 
+
+
 // 2
 console.log(2);
 setTimeout(() => console.log(1), 0);
@@ -15,6 +17,8 @@ new Promise((resolve) => {
   resolve()                // resolve is called, so then will execute. 4 will be printed
 }).then(() => console.log(4));
 console.log(5);
+
+
 
 // 3
 console.log(2); //1
