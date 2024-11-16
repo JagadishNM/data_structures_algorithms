@@ -1,3 +1,4 @@
+// Part-1 https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/1441405773/
 function minRotatedSortedArray(nums) {
 	let left = 0;
 	let right = nums.length - 1;
