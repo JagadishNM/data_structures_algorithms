@@ -5,7 +5,7 @@ let obj = {
 
 console.log(Object.getOwnPropertyDescriptor(obj,'name'));
 console.log(Object.getOwnPropertyDescriptors(obj));
-
+console.log(Reflect.ownKeys(obj)
 let obj2 = {};
 Object.defineProperty(obj2, 'x',{writable: true, configurable: true, enumerable: true, value: 5});
 console.log(obj2);
