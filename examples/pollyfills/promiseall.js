@@ -28,21 +28,24 @@ let promise1 = new Promise((resolve, reject) => {
     const output = [];
     let promisesResolved = 0;
     return new Promise((resolve, reject) => {
-      try {
+      
         promises.forEach(async (promise) => {
+          try {
           const response = await promise;
           promisesResolved += 1;
           output.push(response);
           if (promisesResolved === promises.length) {
             resolve(output);
           }
+        }catch (error) {
+          reject(error);
+        }
         });
-      } catch (error) {
-        reject(error);
-      }
     });
   }
   
   myAll(arr).then((res) => {
     console.log(res);
+  }).catch((e)=>{
+    console.log(e)
   });

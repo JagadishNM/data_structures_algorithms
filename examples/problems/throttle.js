@@ -3,7 +3,7 @@
 function throttle(mainFunction, delay = 300) {
 	let timerFlag = null;
 
-	return (...args) => {
+	return function(...args) {
 		if (timerFlag === null) {
 			mainFunction(args);
 			timerFlag = setTimeout(() => {
@@ -12,6 +12,8 @@ function throttle(mainFunction, delay = 300) {
 		}
 	};
 }
+
+window.addEventListener('scroll', throttle(()=> console.log('scroll'), 3000))
 
 function fetchData() {
 	console.log('Fetching data...');

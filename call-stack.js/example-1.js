@@ -33,3 +33,26 @@ new Promise((resolve) => {
     resolve()               
   }).then(() => console.log(8)); //6
 console.log(5); //4
+
+// 4
+function withPromises() {
+  let promise = new Promise( (resolve, reject) => {
+      setTimeout( () => {
+          resolve("Hello World, after 3 seconds");
+      }
+      , 3000);
+  }
+  );
+  promise.then( (data) => {
+      console.log(data);
+  }
+  );
+  console.log("Some Synchrnous Code");
+}
+
+// output:
+// Note: undefined will be printed if we execute in browser
+
+// Some Synchrnous Code
+// undefined
+// Hello World, after 3 seconds

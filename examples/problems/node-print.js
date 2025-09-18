@@ -39,10 +39,11 @@ const orignodes = [
  function flatnodes(nodes, arr = []){
  nodes.forEach(node => {
      if(Array.isArray(node.children) && node.children.length > 0){
-         flatnodes(node.children, arr);
+        
          let children = node.children?.map(item => item.name);
+         arr.push({name:node.name, children });
          
-         arr.push({name:node.name, children })
+         flatnodes(node.children, arr);
      }else{
          arr.push({name:node.name, children: []})
      }

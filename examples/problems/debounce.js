@@ -8,7 +8,7 @@
 function debounce(func, delay = 300) {
 	let timer;
 
-	return (...args) => {
+	return function(...args) {
 		clearTimeout(timer);
 
 		timer = setTimeout(() => {
@@ -16,6 +16,8 @@ function debounce(func, delay = 300) {
 		}, delay);
 	};
 }
+
+window.addEventListener('resize', debounce(() => console.log('resize'), 3000));
 
 function saveInput() {
 	console.log('Saving data');

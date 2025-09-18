@@ -21,9 +21,9 @@ const data = {
     }]
 };
 
-const stack = [];
 
-function printHighrachy(obj, parent = '') {
+
+function printHighrachy(obj, parent = '', stack = []) {
     
     // Add the current person's name with or without parent name
     if (parent) {
@@ -34,7 +34,7 @@ function printHighrachy(obj, parent = '') {
     
     // Recursively process each offspring
     obj.offsprings.forEach((child) => {
-        printHighrachy(child, obj.name + (parent ? ' ' + parent : ''));
+        printHighrachy(child, obj.name + (parent ? ' ' + parent : ''), stack);
     });
     
     return stack;

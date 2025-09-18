@@ -25,3 +25,20 @@ let str1 = 'I am Monu';
 let str2 = 'am I onMu';
 console.log(validAnagram(str1, str2)); // true
 
+function areAnagrams(str1, str2) {
+    if (str1.length !== str2.length) return false;
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("hello", "world"));  // false
+
+function areAnagrams(str1, str2) {
+    if (str1.length !== str2.length) return false;
+
+    const getSum = str => str.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+
+    return getSum(str1) === getSum(str2);
+}
+console.log(areAnagrams("listen", "silent")); // true
+console.log(areAnagrams("abc", "bca"));       // true
+console.log(areAnagrams("abc", "cbd"));       // false

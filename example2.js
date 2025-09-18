@@ -46,18 +46,36 @@ b.name = "girish";
 
 console.log(a,b)
 
+// example 1 with print function
 const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 function print(value){
 setTimeout(() => console.log(value), 1000);
 }
 for (var i = 0; i < 10; i++) {
-  print(b[i])
+  print(b[i]) // prints 1 to 10
 }
 
+// example 2 with var
 const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 for (var i = 0; i < 10; i++) {
   setTimeout(() => console.log(b[i]), 1000); // 10 times undefined
+}
+
+// example 3 with let
+
+const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < 10; i++) {
+  setTimeout(() => console.log(b[i]), 1000); // 10 times undefined
+}
+
+// example 4 with var
+for (var i = 0; i < 3; i++) {
+  setTimeout( () => {
+      console.log(i);
+  }
+  , 100);
 }
 
 
@@ -114,7 +132,7 @@ class ngif{
 @Input ngif: boolen;
 	constructor(private viewref: ViewContainerref, private template: Templateref){
   	if(ngif){
-    viewref.embededView()
+    viewref.embededView(template)
     }
     viewref.clear
   }

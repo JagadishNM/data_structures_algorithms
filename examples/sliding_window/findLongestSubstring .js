@@ -1,14 +1,15 @@
 function findLongestSubstring(str) {
-	const obj = {};
-	let maxLen = 0;
+	const seen = {};
+	let longest = 0;
 	let start = 0;
 
 	for (let i = 0; i < str.length; i++) {
-		if (obj[str[i]]) {
-			start = Math.max(start, obj[str[i]]);
+		let char = str[i];
+		if (seen[char]) {
+			start = Math.max(start, seen[char]);
 		}
 
-		obj[str[i]] = i + 1;
+		seen[str[i]] = i + 1;
 		maxLen = Math.max(maxLen, i - start + 1);
 	}
 
